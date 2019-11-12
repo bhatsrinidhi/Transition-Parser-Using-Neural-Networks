@@ -1,0 +1,1 @@
+{"vocab_size": 44486, "embedding_dim": 50, "num_tokens": 48, "hidden_dim": 200, "num_transitions": 91, "regularization_lambda": 1e-08, "trainable_embeddings": true, "activation_name": "cubic"}
