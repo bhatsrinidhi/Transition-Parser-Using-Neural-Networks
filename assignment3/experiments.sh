@@ -11,14 +11,12 @@
 # Tanh and Sigmoid Activations
 python3 train.py data/train.conll \
                 data/dev.conll \
-                --use-cached-data \
                 --pretrained-embedding-file data/glove.6B.50d.txt \
                 --activation-name tanh \
                 --experiment-name tanh
 
 python3 train.py data/train.conll \
                 data/dev.conll \
-                --use-cached-data \
                 --pretrained-embedding-file data/glove.6B.50d.txt \
                 --activation-name sigmoid \
                 --experiment-name sigmoid
@@ -26,14 +24,12 @@ python3 train.py data/train.conll \
 # Without Pretrained embeddings
 python3 train.py data/train.conll \
                 data/dev.conll \
-                --use-cached-data \
                 --experiment-name wo_glove
 
 # Without tunable embeddings
 python3 train.py data/train.conll \
                 data/dev.conll \
                 --pretrained-embedding-file data/glove.6B.50d.txt \
-                --use-cached-data \
                 --trainable-embeddings \
                 --experiment-name wo_emb_tune
 
