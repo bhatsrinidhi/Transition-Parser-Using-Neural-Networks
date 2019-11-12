@@ -191,6 +191,8 @@ class DependencyParser(models.Model):
 
         factor = labels * mask2
         result2 = res*factor
+        #loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(logits=self.logits, labels=tf.argmax(self.labels, axis=1)))
+
         loss = tf.reduce_mean(tf.math.log(tf.reduce_sum(result2,axis=1)))*-1
         #loss = tf.math.log(tf.reduce_sum(result2,axis=1))
         #loss = tf.reduce_mean(loss)
