@@ -139,7 +139,7 @@ class DependencyParser(models.Model):
         term1 = tf.matmul(embedding,self.ip_weights)
         #bias = tf.Variable(tf.zeros([1,self.hidden_dim]))
         term1 = tf.add(term1,self.bias)
-        term2 = self._activation.call(term1)
+        term2 = self._activation(term1)
         logits = tf.matmul(term2,self.op_weights)
 
         output_dict = {"logits": logits}
