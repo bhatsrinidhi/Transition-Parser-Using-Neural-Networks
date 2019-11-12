@@ -2,11 +2,11 @@
 
 # Base Configuration:
 
-python3 train.py data/train.conll \
-                data/dev.conll \
-                --pretrained-embedding-file data/glove.6B.50d.txt \
-                --cache-processed-data \
-                --experiment-name basic
+#python3 train.py data/train.conll \
+#                data/dev.conll \
+#                --pretrained-embedding-file data/glove.6B.50d.txt \
+#                --cache-processed-data \
+#                --experiment-name basic
 
 # Tanh and Sigmoid Activations
 python3 train.py data/train.conll \
